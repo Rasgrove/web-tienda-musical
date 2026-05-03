@@ -1,0 +1,41 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: "public/Assets"
+public_folder: "/Assets"
+
+collections:
+  - name: "content"
+    label: "Contenido de la Tienda"
+    files:
+      - name: "catalog"
+        label: "Catálogo de Instrumentos"
+        file: "public/data/catalog.json"
+        description: "Lista de productos en el catálogo"
+        fields:
+          - name: "items"
+            label: "Productos"
+            widget: "list"
+            fields:
+              - {label: "Nombre", name: "title", widget: "string"}
+              - {label: "Imagen", name: "image", widget: "image"}
+              - {label: "Descripción", name: "description", widget: "text"}
+              - {label: "Modelo Específico", name: "model", widget: "string"}
+              - {label: "Categoría", name: "category", widget: "select", options: ["Guitarras", "Violines", "Pianos", "Guitarras Eléctricas", "Teclados", "Ropa", "Otros"]}
+      
+      - name: "testimonials"
+        label: "Testimonios"
+        file: "public/data/testimonials.json"
+        description: "Testimonios de Clientes"
+        fields:
+          - name: "items"
+            label: "Comentarios"
+            widget: "list"
+            fields:
+              - {label: "Nombre", name: "name", widget: "string"}
+              - {label: "Comentario", name: "comment", widget: "text"}
+              - {label: "Red Social", name: "social", widget: "select", options: ["Instagram", "Facebook", "Email"]}
+              - {label: "Destacado", name: "featured", widget: "boolean", default: false}

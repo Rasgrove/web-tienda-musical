@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "title": "Guitarra Acústica Premium",
+      "image": "/Assets/1.jpg",
+      "description": "Sonido brillante y cálido, ideal para rock acústico y pop.",
+      "model": "AC-450",
+      "category": "Guitarras"
+    },
+    {
+      "title": "Guitarra Eléctrica Shredder",
+      "image": "/Assets/2.jpg",
+      "description": "Perfecta para los solos más rápidos. Pastillas de alta ganancia.",
+      "model": "ST-200",
+      "category": "Guitarras Eléctricas"
+    },
+    {
+      "title": "Guitarra Clásica de Estudio",
+      "image": "/Assets/3.jpg",
+      "description": "Cuerdas de nylon. Comodidad y tono tradicional.",
+      "model": "CL-10",
+      "category": "Guitarras"
+    },
+    {
+      "title": "Violín Stradivarius Copy",
+      "image": "/Assets/11.jpg",
+      "description": "Copia fidedigna, resonancia increíble para orquesta.",
+      "model": "VN-1715",
+      "category": "Violines"
+    },
+    {
+      "title": "Violín Eléctrico Silent",
+      "image": "/Assets/12.jpg",
+      "description": "Practica en silencio o conéctalo al ampli con distorsión.",
+      "model": "EV-50",
+      "category": "Violines"
+    },
+    {
+      "title": "Piano de Cola Imperial",
+      "image": "/Assets/21.jpg",
+      "description": "El rey de los instrumentos. Dinámica y expresión infinita.",
+      "model": "GR-90",
+      "category": "Pianos"
+    },
+    {
+      "title": "Teclado Sintetizador 88",
+      "image": "/Assets/22.jpg",
+      "description": "88 teclas pesadas, cientos de sonidos para producciones top.",
+      "model": "SY-88",
+      "category": "Teclados"
+    }
+  ]
+}
