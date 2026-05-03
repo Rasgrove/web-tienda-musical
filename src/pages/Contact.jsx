@@ -59,7 +59,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 style={{ color: 'var(--color-primary)', fontSize: '1.2rem' }}>Ubicación</h4>
-                  <p style={{ color: 'var(--color-text-muted)' }}>Av. Arce Esq. Cordero, La Paz, Bolivia</p>
+                  <a href="https://maps.google.com/?q=Av.+Arce+Esq.+Cordero,+La+Paz,+Bolivia" target="_blank" rel="noreferrer" style={{ color: 'var(--color-text-muted)', textDecoration: 'underline', transition: 'color var(--transition-fast)' }} onMouseOver={(e) => e.target.style.color = 'var(--color-primary)'} onMouseOut={(e) => e.target.style.color = 'var(--color-text-muted)'}>Av. Arce Esq. Cordero, La Paz, Bolivia</a>
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>

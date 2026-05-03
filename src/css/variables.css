@@ -1,12 +1,12 @@
 :root {
   /* Colors - Redesigned for less harsh contrast and more organic richness */
   --color-primary: #1C1E1B; /* Softened black/very dark olive */
-  --color-secondary: #FFFCF7; /* Warm off-white */
+  --color-secondary: #F6F4EB; /* Smoother, parchment-like off-white */
   --color-accent-jade: #6B9E83; /* Richer jade */
   --color-accent-wood: #8B5A2B; /* Café madera */
   --color-accent-navy: #1A2849; /* Azul Marino */
-  --color-bg-beige: #EFEBDF; /* Very soft beige */
-  --color-bg-light: #FAFAFA; /* Soft light grey/white for sections */
+  --color-bg-beige: #EBE6D8; /* Slightly deeper natural beige */
+  --color-bg-light: #F7F5F0; /* Soft creamy light grey/white for sections */
   --color-text-dark: #2F3630; /* Dark slate instead of pure black */
   --color-text-light: #F4F6F5; /* Soft white */
   --color-text-muted: #6B726D; /* Elegant gray */

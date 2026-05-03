@@ -14,12 +14,12 @@ const AboutUs = () => {
 
       {/* Story */}
       <section style={{ padding: 'var(--spacing-lg) 0', backgroundColor: 'var(--color-bg-light)' }}>
-        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'minmax(300px, 1fr) 1fr', gap: 'var(--spacing-xl)', alignItems: 'center' }}>
-          <motion.div initial={{ x: -50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }}>
+        <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 'var(--spacing-xl)', alignItems: 'center' }}>
+          <motion.div initial={{ x: -50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }} style={{ alignSelf: 'start', marginTop: 'var(--spacing-sm)' }}>
             <img src="/Assets/store 3.jpg" alt="Interior Tienda Instrum" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 20px 50px rgba(0,0,0,0.15)' }} />
           </motion.div>
-          <motion.div initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }}>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: 'var(--spacing-sm)', color: 'var(--color-primary)' }}>Nacidos en La Paz, Para el Mundo</h2>
+          <motion.div initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }} style={{ padding: '0 var(--spacing-sm)' }}>
+            <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: 'var(--spacing-sm)', color: 'var(--color-primary)' }}>Nacidos en La Paz, Para el Mundo</h2>
             <p style={{ color: 'var(--color-text-muted)', fontSize: '1.1rem', marginBottom: 'var(--spacing-sm)' }}>
               Comenzamos en un pequeño taller motivados por un vacío gigante: la dificultad de encontrar instrumentos de primerísimo nivel en nuestra ciudad sin tener que importar a ciegas.
             </p>
