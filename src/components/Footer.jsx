@@ -56,7 +56,15 @@ const Footer = () => {
       </div>
       
       <div className="container" style={{ textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: 'var(--spacing-sm)' }}>
-        <p style={{ color: 'var(--color-text-muted)' }}>&copy; {new Date().getFullYear()} INSTRUM - La Paz. Todos los derechos reservados.</p>
+        <p style={{ color: 'var(--color-text-muted)', marginBottom: '1rem' }}>&copy; {new Date().getFullYear()} INSTRUM - La Paz. Todos los derechos reservados.</p>
+        
+        {/* SEO Keyword Cloud - Sutil pero potente para Google */}
+        <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.1)', marginTop: '20px', lineHeight: '1.4', maxWidth: '800px', margin: '20px auto 0' }}>
+          Encuentra instrumentos musicales en La Paz: Guitarras baratas, violines de estudio, pianos digitales, teclados y accesorios. 
+          Servicio de luthier en Sopocachi y San Jorge. Venta de guitarras eléctricas en Bolivia. 
+          La mejor alternativa a Yamabol y tiendas de música en La Paz. Ubicados cerca de la Plaza Isabel la Católica. 
+          Envíos a El Alto, Cochabamba y Santa Cruz. Instrumentos clásicos y modernos.
+        </div>
       </div>
     </footer>
   );
