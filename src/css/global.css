@@ -42,22 +42,26 @@ button {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
 .main-content {
   flex: 1;
   margin-top: var(--navbar-height);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 var(--spacing-sm);
 }
 
 /* Premium General Styles */
 .section-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 4rem);
   text-align: center;
   margin-bottom: var(--spacing-sm);
   color: var(--color-primary);
@@ -79,7 +83,7 @@ button {
   align-items: center;
   justify-content: center;
   background-color: var(--color-accent-jade);
-  color: var(--color-primary);
+  color: var(--color-secondary);
   padding: 1rem 2.5rem;
   border-radius: 50px;
   font-weight: 600;
@@ -91,7 +95,7 @@ button {
 
 .btn-primary:hover {
   background-color: var(--color-primary);
-  color: var(--color-bg-light);
+  color: var(--color-secondary);
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
@@ -114,5 +118,22 @@ button {
 
 .btn-secondary:hover {
   background-color: var(--color-primary);
-  color: var(--color-bg-light);
+  color: var(--color-secondary);
+}
+
+/* Responsive Fixes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input, textarea {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
 }

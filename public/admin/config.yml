@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
+locale: 'es'
+
 media_folder: "public/Assets"
 public_folder: "/Assets"
 
@@ -19,9 +21,11 @@ collections:
             widget: "list"
             fields:
               - {label: "Nombre", name: "title", widget: "string"}
-              - {label: "Imagen", name: "image", widget: "image"}
-              - {label: "Descripción", name: "description", widget: "text"}
+              - {label: "Imagen principal", name: "image", widget: "image"}
+              - {label: "Descripción Técnica", name: "description", widget: "text"}
               - {label: "Modelo Específico", name: "model", widget: "string"}
+              - {label: "Precio (Bs./USD)", name: "price", widget: "string", default: "Consultar"}
+              - {label: "Especificaciones Detalladas", name: "specs", widget: "markdown", required: false}
               - {label: "Categoría", name: "category", widget: "select", options: ["Guitarras", "Violines", "Pianos", "Guitarras Eléctricas", "Teclados", "Ropa", "Otros"]}
       
       - name: "testimonials"

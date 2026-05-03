@@ -39,8 +39,8 @@ const Navbar = () => {
       transition: 'all var(--transition-normal)'
     }}>
       <div className="container" style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Link to="/" style={{ fontWeight: 800, fontSize: '1.8rem', color: 'var(--color-primary)', letterSpacing: '-1px' }}>
-          INSTRUM<span style={{ color: 'var(--color-accent-wood)' }}>.</span>
+        <Link to="/" style={{ fontWeight: 800, fontSize: '1.5rem', color: scrolled ? 'var(--color-primary)' : 'var(--color-secondary)', letterSpacing: '-0.5px' }}>
+          INSTRUM<span style={{ color: 'var(--color-accent-jade)' }}> - La Paz</span>
         </Link>
         
         {/* Desktop Menu */}
@@ -51,7 +51,7 @@ const Navbar = () => {
               to={link.path} 
               style={{
                 position: 'relative',
-                color: location.pathname === link.path ? 'var(--color-accent-wood)' : 'var(--color-primary)',
+                color: location.pathname === link.path ? 'var(--color-accent-jade)' : (scrolled ? 'var(--color-primary)' : 'var(--color-secondary)'),
                 transition: 'color var(--transition-fast)'
               }}
             >
@@ -65,7 +65,7 @@ const Navbar = () => {
                     left: 0,
                     right: 0,
                     height: '2px',
-                    backgroundColor: 'var(--color-accent-wood)'
+                    backgroundColor: 'var(--color-accent-jade)'
                   }}
                 />
               )}
@@ -74,7 +74,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button onClick={toggleMenu} style={{ display: 'block' }} className="mobile-toggle">
+        <button onClick={toggleMenu} style={{ display: 'block', color: scrolled ? 'var(--color-primary)' : 'var(--color-secondary)' }} className="mobile-toggle">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 style={{
                   fontSize: '1.2rem',
                   fontWeight: 600,
-                  color: location.pathname === link.path ? 'var(--color-accent-wood)' : 'var(--color-primary)'
+                  color: location.pathname === link.path ? 'var(--color-accent-jade)' : 'var(--color-primary)'
                 }}
               >
                 {link.name}

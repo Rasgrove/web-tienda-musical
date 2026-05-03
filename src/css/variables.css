@@ -1,32 +1,32 @@
 :root {
-  /* Colors */
-  --color-primary: #121212; /* Black */
-  --color-secondary: #ffffff; /* White */
-  --color-accent-jade: #7FBA9E; /* Jade Claro */
+  /* Colors - Redesigned for less harsh contrast and more organic richness */
+  --color-primary: #1C1E1B; /* Softened black/very dark olive */
+  --color-secondary: #FFFCF7; /* Warm off-white */
+  --color-accent-jade: #6B9E83; /* Richer jade */
   --color-accent-wood: #8B5A2B; /* Café madera */
   --color-accent-navy: #1A2849; /* Azul Marino */
-  --color-bg-beige: #F5F5DC; /* Beige / Café con leche claro */
-  --color-bg-light: #FAFAFA;
-  --color-text-dark: #121212;
-  --color-text-light: #ffffff;
-  --color-text-muted: #555555;
+  --color-bg-beige: #EFEBDF; /* Very soft beige */
+  --color-bg-light: #FAFAFA; /* Soft light grey/white for sections */
+  --color-text-dark: #2F3630; /* Dark slate instead of pure black */
+  --color-text-light: #F4F6F5; /* Soft white */
+  --color-text-muted: #6B726D; /* Elegant gray */
   
   /* Typography */
-  --font-primary: 'Outfit', sans-serif; /* Modern, clean */
-  --font-secondary: 'Inter', sans-serif; /* Standard readable */
+  --font-primary: 'Outfit', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
   
   /* Transitions */
   --transition-fast: 0.2s ease-in-out;
-  --transition-normal: 0.3s ease-in-out;
-  --transition-slow: 0.5s ease-in-out;
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 8rem;
+  --spacing-lg: 3.5rem;
+  --spacing-xl: 6rem;
 
   /* Header */
-  --navbar-height: 80px;
+  --navbar-height: 85px;
 }
