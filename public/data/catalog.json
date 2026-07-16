@@ -59,10 +59,11 @@
     {
       "title": "Martin D-28",
       "image": "/Assets/8.webp",
-      "description": "La legendaria acústica Dreadnought con maderas sólidas premium.",
+      "description": "La legendaria acústica Dreadnought con maderas sólidas premium. Su precio se compensa por ser una de las guitarras mas legendarias en la industria; calidad asegurada, profesional y lista para ser la herramienta de cualquier nueva estrella internacional.",
       "model": "D-28",
-      "price": "Consultar Dms",
-      "category": "Guitarras"
+      "price": "Consultar DM's",
+      "category": "Guitarras",
+      "specs": "***ATENCIÓN: SOLO POR PEDIDO!***"
     },
     {
       "title": "Takamine G-Series",
@@ -115,7 +116,7 @@
     {
       "price": "Bs.- 97000",
       "image": "/Assets/038f8f49-bfa0-4a7a-9b3f-43cadb0ed620.png",
-      "title": "Echidona",
+      "title": "Echidonna",
       "description": "ECHIDONNA!!!!!",
       "model": "Echidonna",
       "specs": "**TOOL TIP MISSING!**",
