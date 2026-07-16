@@ -111,6 +111,15 @@
       "model": "TS-SABBATH",
       "price": "Bs. 150",
       "category": "Ropa"
+    },
+    {
+      "price": "Bs.- 90000",
+      "image": "/Assets/echidna-ep-2c41-1784182036183.webp",
+      "title": "Echidona",
+      "description": "ECHIDONNA!!!!!",
+      "model": "Echidonna",
+      "specs": "**TOOL TIP MISSING!**",
+      "category": "Otros"
     }
   ]
 }
