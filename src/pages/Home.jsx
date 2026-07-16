@@ -14,7 +14,7 @@ const Home = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: `linear-gradient(to bottom, rgba(28, 30, 27, 0.4), rgba(28, 30, 27, 0.8)), url('/Assets/pexels-modus-vivendi-5137409.jpg') center/cover no-repeat`,
+        background: `linear-gradient(to bottom, rgba(28, 30, 27, 0.4), rgba(28, 30, 27, 0.8)), url('/Assets/pexels-modus-vivendi-5137409.webp') center/cover no-repeat`,
         color: 'var(--color-text-light)',
         textAlign: 'center',
         padding: 'var(--spacing-md)'
@@ -48,7 +48,7 @@ const Home = () => {
              </p>
           </motion.div>
           <motion.div initial={{ scale: 0.9, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }}>
-            <img src="/Assets/cool1.jpg" alt="Instrumentos Clásicos y Modernos" style={{ width: '100%', height: '100%', display: 'block' }} />
+            <img src="/Assets/cool1.webp" alt="Instrumentos Clásicos y Modernos" style={{ width: '100%', height: '100%', display: 'block' }} />
           </motion.div>
         </div>
       </section>
@@ -99,7 +99,7 @@ const Home = () => {
       </section>
 
       {/* Visual Intermission */}
-      <section style={{ height: '400px', width: '100%', background: 'linear-gradient(rgba(28, 30, 27, 0.4), rgba(28, 30, 27, 0.4)), url(/Assets/coolvio.jpg) center/cover fixed' }}>
+      <section style={{ height: '400px', width: '100%', background: 'linear-gradient(rgba(28, 30, 27, 0.4), rgba(28, 30, 27, 0.4)), url(/Assets/coolvio.webp) center/cover fixed' }}>
       </section>
 
       {/* CTA Section */}

@@ -16,7 +16,7 @@ const AboutUs = () => {
       <section style={{ padding: 'var(--spacing-lg) 0', backgroundColor: 'var(--color-bg-light)' }}>
         <div className="container" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 'var(--spacing-xl)', alignItems: 'center' }}>
           <motion.div initial={{ x: -50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }} style={{ alignSelf: 'start', marginTop: 'var(--spacing-sm)' }}>
-            <img src="/Assets/store 3.jpg" alt="Interior Tienda Instrum" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 20px 50px rgba(0,0,0,0.15)' }} />
+            <img src="/Assets/store 3.webp" alt="Interior Tienda Instrum" style={{ width: '100%', borderRadius: '20px', boxShadow: '0 20px 50px rgba(0,0,0,0.15)' }} />
           </motion.div>
           <motion.div initial={{ x: 50, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }} style={{ padding: '0 var(--spacing-sm)' }}>
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: 'var(--spacing-sm)', color: 'var(--color-primary)' }}>Nacidos en La Paz, Para el Mundo</h2>
@@ -64,7 +64,7 @@ const AboutUs = () => {
             
             <motion.div whileHover={{ y: -15, scale: 1.02 }} style={{ backgroundColor: 'var(--color-secondary)', padding: 'var(--spacing-lg)', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
               <div style={{ width: '180px', height: '180px', borderRadius: '50%', backgroundColor: 'var(--color-bg-light)', margin: '0 auto 20px', overflow: 'hidden', border: '5px solid var(--color-bg-beige)' }}>
-                 <img src="/Assets/Jake Smith.png" alt="Jake Smith" style={{width: '100%', height:'100%', objectFit: 'cover'}}/>
+                 <img src="/Assets/Jake Smith.webp" alt="Jake Smith" style={{width: '100%', height:'100%', objectFit: 'cover'}}/>
               </div>
               <h3 style={{ fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '5px' }}>Jake Smith</h3>
               <p style={{ color: 'var(--color-accent-wood)', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '15px' }}>Luthier & Especialista</p>
@@ -73,7 +73,7 @@ const AboutUs = () => {
             
             <motion.div whileHover={{ y: -15, scale: 1.02 }} style={{ backgroundColor: 'var(--color-secondary)', padding: 'var(--spacing-lg)', borderRadius: '20px', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
               <div style={{ width: '180px', height: '180px', borderRadius: '50%', backgroundColor: 'var(--color-bg-light)', margin: '0 auto 20px', overflow: 'hidden', border: '5px solid var(--color-bg-beige)' }}>
-                 <img src="/Assets/Gilmoure.png" alt="David Gilmoure" style={{width: '100%', height:'100%', objectFit: 'cover'}}/>
+                 <img src="/Assets/Gilmoure.webp" alt="David Gilmoure" style={{width: '100%', height:'100%', objectFit: 'cover'}}/>
               </div>
               <h3 style={{ fontSize: '1.8rem', color: 'var(--color-primary)', marginBottom: '5px' }}>David Gilmour</h3>
               <p style={{ color: 'var(--color-accent-wood)', fontWeight: 600, letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '15px' }}>Comprador / Curador</p>

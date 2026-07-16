@@ -86,7 +86,7 @@ const Contact = () => {
       </section>
 
       {/* Map Placeholder */}
-      <section style={{ height: '400px', width: '100%', backgroundColor: 'var(--color-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundImage: 'url(/Assets/store2.jpg)', backgroundPosition: 'center', backgroundSize: 'cover', backgroundBlendMode: 'overlay' }}>
+      <section style={{ height: '400px', width: '100%', backgroundColor: 'var(--color-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundImage: 'url(/Assets/store2.webp)', backgroundPosition: 'center', backgroundSize: 'cover', backgroundBlendMode: 'overlay' }}>
           <div style={{ backgroundColor: 'white', padding: '1rem 2rem', borderRadius: '50px', fontWeight: 'bold' }}>📍 Encuéntranos aquí</div>
       </section>
     </div>

@@ -1,3 +1,4 @@
+local_backend: true
 backend:
   name: git-gateway
   branch: main
@@ -21,7 +22,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Nombre", name: "title", widget: "string"}
-              - {label: "Imagen principal", name: "image", widget: "image"}
+              - {label: "Imagen principal", name: "image", widget: "webp-image"}
               - {label: "Descripción Técnica", name: "description", widget: "text"}
               - {label: "Modelo Específico", name: "model", widget: "string"}
               - {label: "Precio (Bs./USD)", name: "price", widget: "string", default: "Consultar"}

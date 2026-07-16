@@ -2,7 +2,7 @@
   "items": [
     {
       "title": "Fender Stratocaster Classic Player",
-      "image": "/Assets/1.jpg",
+      "image": "/Assets/1.webp",
       "description": "Una de las piezas más icónicas en nuestra tienda. Sonido versátil que dominará cualquier escenario.",
       "model": "ST-Classic",
       "price": "$us 950",
@@ -10,7 +10,7 @@
     },
     {
       "title": "Gibson Les Paul Studio",
-      "image": "/Assets/2.jpg",
+      "image": "/Assets/2.webp",
       "description": "Tono agresivo y pesado con pastillas humbucker. Perfecta para puristas del Rock Clásico.",
       "model": "LP-Studio",
       "price": "$us 1450",
@@ -18,7 +18,7 @@
     },
     {
       "title": "PRS SE Custom 24",
-      "image": "/Assets/3.jpg",
+      "image": "/Assets/3.webp",
       "description": "Estética asombrosa con tapa de arce flameado. Comodidad y versatilidad extremas.",
       "model": "SE-24",
       "price": "Bs. 6500",
@@ -26,7 +26,7 @@
     },
     {
       "title": "Epiphone Dot ES-335",
-      "image": "/Assets/4.jpg",
+      "image": "/Assets/4.webp",
       "description": "Guitarra semi-hueca con cálida resonancia jazzística y suficiente agresividad para el blues.",
       "model": "ES-335",
       "price": "Bs. 4800",
@@ -34,7 +34,7 @@
     },
     {
       "title": "Yamaha Pacifica 112V",
-      "image": "/Assets/5.jpg",
+      "image": "/Assets/5.webp",
       "description": "El instrumento de entrada perfecto, gran calidad de construcción a un valor incomparable.",
       "model": "PAC112",
       "price": "Bs. 3000",
@@ -42,7 +42,7 @@
     },
     {
       "title": "Ibanez RG Standard",
-      "image": "/Assets/6.jpg",
+      "image": "/Assets/6.webp",
       "description": "Diseñada para shredders. Mástil ultra delgado, ideal para metal extremo.",
       "model": "RG350",
       "price": "$us 550",
@@ -50,7 +50,7 @@
     },
     {
       "title": "Taylor 214ce Acústica",
-      "image": "/Assets/7.jpg",
+      "image": "/Assets/7.webp",
       "description": "Tonos cristalinos y balanceados. Con electrónica Expression System lista para conectar.",
       "model": "214ce",
       "price": "$us 1100",
@@ -58,7 +58,7 @@
     },
     {
       "title": "Martin D-28",
-      "image": "/Assets/8.jpg",
+      "image": "/Assets/8.webp",
       "description": "La legendaria acústica Dreadnought con maderas sólidas premium.",
       "model": "D-28",
       "price": "Consultar Dms",
@@ -66,7 +66,7 @@
     },
     {
       "title": "Takamine G-Series",
-      "image": "/Assets/9.jpg",
+      "image": "/Assets/9.webp",
       "description": "Excelente preamplificador y sonido unplugged cálido para baladas pop.",
       "model": "GD11MCE",
       "price": "Bs. 3200",
@@ -74,7 +74,7 @@
     },
     {
       "title": "Violín Stradivarius Copy Antonius",
-      "image": "/Assets/11.jpg",
+      "image": "/Assets/11.webp",
       "description": "Copia artesanal de madera envejecida, resonancia increíble para estudiantes intermedios y orquesta.",
       "model": "VN-1715",
       "price": "Bs. 1800",
@@ -82,7 +82,7 @@
     },
     {
       "title": "Violín Acústico Yamaha V5",
-      "image": "/Assets/12.jpg",
+      "image": "/Assets/12.webp",
       "description": "Confiabilidad asegurada, la elección número uno de miles de maestros en el mundo.",
       "model": "V5SC",
       "price": "$us 450",
@@ -90,7 +90,7 @@
     },
     {
       "title": "Piano de Cola Steinway Model S",
-      "image": "/Assets/21.jpg",
+      "image": "/Assets/21.webp",
       "description": "La perfección tímbrica por excelencia. El piano que todo artista sueña tocar.",
       "model": "Model-S",
       "price": "Bajo Pedido",
@@ -98,7 +98,7 @@
     },
     {
       "title": "Piano Acústico Vertical Kawai",
-      "image": "/Assets/22.jpg",
+      "image": "/Assets/22.webp",
       "description": "Calidez japonesa y acción mecánica magistral, perfecto para recintos medianos.",
       "model": "K-300",
       "price": "Bs. 35000",
@@ -106,7 +106,7 @@
     },
     {
       "title": "Remera Vintage Black Sabbath",
-      "image": "/Assets/1a.jpg",
+      "image": "/Assets/1a.webp",
       "description": "Polera 100% algodón orgánico con estampado de alta fidelidad, rinde homenaje a los reyes del metal.",
       "model": "TS-SABBATH",
       "price": "Bs. 150",
