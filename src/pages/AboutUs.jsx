@@ -1,7 +1,17 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Music, Ribbon } from 'lucide-react';
+import { Users, Music, Ribbon, MessageSquare } from 'lucide-react';
 
 const AboutUs = () => {
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/testimonials.json')
+      .then(res => res.json())
+      .then(data => setTestimonials(data.items || []))
+      .catch(console.error);
+  }, []);
+
   return (
     <div style={{ overflowX: 'hidden' }}>
       {/* Header */}
@@ -83,6 +93,40 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonials */}
+      {testimonials.length > 0 && (
+      <section style={{ padding: 'var(--spacing-xl) 0', backgroundColor: 'var(--color-bg-light)' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <h2 className="section-title">Lo Que Dicen Nuestros Clientes</h2>
+          <p className="section-subtitle">Las experiencias de músicos bolivianos que confiaron en nosotros.</p>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'var(--spacing-lg)', marginTop: 'var(--spacing-lg)' }}>
+            {testimonials.map((t, index) => (
+              <motion.div 
+                key={index} 
+                whileHover={{ y: -5 }}
+                style={{ 
+                  backgroundColor: 'var(--color-bg-beige)', 
+                  padding: 'var(--spacing-lg)', 
+                  borderRadius: '15px', 
+                  border: t.featured ? '2px solid var(--color-accent-jade)' : '1px solid #ddd',
+                  textAlign: 'left'
+                }}
+              >
+                <MessageSquare size={30} color="var(--color-primary)" style={{ opacity: 0.2, marginBottom: '15px' }} />
+                <p style={{ fontSize: '1.1rem', fontStyle: 'italic', color: 'var(--color-text-muted)', marginBottom: '15px' }}>"{t.comment}"</p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontWeight: 800, color: 'var(--color-primary)' }}>{t.name}</span>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--color-accent-wood)' }}>Vía {t.social}</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      )}
+
     </div>
   );
 };

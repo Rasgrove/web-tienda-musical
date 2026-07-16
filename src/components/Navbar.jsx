@@ -35,12 +35,12 @@ const Navbar = () => {
       alignItems: 'center',
       justifyContent: 'space-between',
       padding: '0 var(--spacing-sm)',
-      backgroundColor: scrolled ? 'var(--color-bg-light)' : 'transparent',
-      boxShadow: scrolled ? '0 2px 10px rgba(0,0,0,0.05)' : 'none',
+      backgroundColor: 'var(--color-bg-light)',
+      boxShadow: '0 2px 10px rgba(0,0,0,0.05)',
       transition: 'all var(--transition-normal)'
     }}>
       <div className="container" style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Link to="/" style={{ fontWeight: 800, fontSize: '1.5rem', color: (!isHome || scrolled) ? 'var(--color-primary)' : 'var(--color-secondary)', letterSpacing: '-0.5px' }}>
+        <Link to="/" style={{ fontWeight: 800, fontSize: '1.5rem', color: 'var(--color-primary)', letterSpacing: '-0.5px' }}>
           INSTRUM<span style={{ color: 'var(--color-accent-jade)' }}> - La Paz</span>
         </Link>
         
@@ -52,7 +52,7 @@ const Navbar = () => {
               to={link.path} 
               style={{
                 position: 'relative',
-                color: location.pathname === link.path ? 'var(--color-accent-jade)' : ((!isHome || scrolled) ? 'var(--color-primary)' : 'var(--color-secondary)'),
+                color: location.pathname === link.path ? 'var(--color-accent-jade)' : 'var(--color-primary)',
                 transition: 'color var(--transition-fast)'
               }}
             >
@@ -75,7 +75,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button onClick={toggleMenu} style={{ display: 'block', color: (!isHome || scrolled) ? 'var(--color-primary)' : 'var(--color-secondary)' }} className="mobile-toggle">
+        <button onClick={toggleMenu} style={{ display: 'block', color: 'var(--color-primary)' }} className="mobile-toggle">
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>

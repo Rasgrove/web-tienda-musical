@@ -3,6 +3,8 @@ backend:
   name: git-gateway
   branch: main
 
+publish_mode: editorial_workflow
+
 locale: 'es'
 
 media_folder: "public/Assets"
@@ -22,7 +24,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Nombre", name: "title", widget: "string"}
-              - {label: "Imagen principal", name: "image", widget: "webp-image"}
+              - {label: "Imagen principal", name: "image", widget: "image"}
               - {label: "Descripción Técnica", name: "description", widget: "text"}
               - {label: "Modelo Específico", name: "model", widget: "string"}
               - {label: "Precio (Bs./USD)", name: "price", widget: "string", default: "Consultar"}

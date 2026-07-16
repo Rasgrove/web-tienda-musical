@@ -13,7 +13,7 @@ const Catalog = () => {
       .catch(console.error);
   }, []);
 
-  const categories = ['Todos', 'Guitarras', 'Guitarras Eléctricas', 'Violines', 'Pianos', 'Ropa'];
+  const categories = ['Todos', 'Guitarras', 'Guitarras Eléctricas', 'Violines', 'Pianos', 'Ropa', 'Otros'];
 
   const filteredProducts = products.filter(p => filter === 'Todos' || p.category === filter);
 
