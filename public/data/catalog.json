@@ -10,7 +10,7 @@
     },
     {
       "title": "Gibson Les Paul Studio",
-      "image": "/Assets/2.webp",
+      "image": "/Assets/pexels-mojophotography-10439740.webp",
       "description": "Tono agresivo y pesado con pastillas humbucker. Perfecta para puristas del Rock Clásico.",
       "model": "LP-Studio",
       "price": "$us 1450",
@@ -89,7 +89,7 @@
       "category": "Violines"
     },
     {
-      "title": "Piano de Cola Steinway Model S",
+      "title": "Piano de Cola Steinway Model SS",
       "image": "/Assets/21.webp",
       "description": "La perfección tímbrica por excelencia. El piano que todo artista sueña tocar.",
       "model": "Model-S",
@@ -113,8 +113,8 @@
       "category": "Ropa"
     },
     {
-      "price": "Bs.- 90000",
-      "image": "/Assets/d582d6519384b8f22ba9ecc8e0d7f267-1784182209501.webp",
+      "price": "Bs.- 97000",
+      "image": "/Assets/d582d6519384b8f22ba9ecc8e0d7f267.jpg",
       "title": "Echidona",
       "description": "ECHIDONNA!!!!!",
       "model": "Echidonna",
