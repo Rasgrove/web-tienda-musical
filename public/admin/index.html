@@ -4,11 +4,303 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Administrador - Instrum</title>
-    <!-- Widget de Identidad de Netlify -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+      /* ===== BANNER DE INSTRUCCIONES ===== */
+      #instrum-guide {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 99999;
+        background: linear-gradient(90deg, #1c3a2e 0%, #2d5a45 100%);
+        color: #fff;
+        font-family: 'Segoe UI', sans-serif;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        height: 52px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.35);
+        flex-shrink: 0;
+      }
+      #instrum-guide .guide-steps {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      #instrum-guide .step {
+        background: rgba(255,255,255,0.12);
+        border-radius: 20px;
+        padding: 4px 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+      }
+      #instrum-guide .step .num {
+        background: #4caf85;
+        color: #fff;
+        border-radius: 50%;
+        width: 18px; height: 18px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 11px;
+        flex-shrink: 0;
+      }
+      #instrum-guide .arrow { opacity: 0.5; font-size: 16px; }
+      #instrum-guide .credit-warn {
+        background: #e07b2a;
+        border-radius: 20px;
+        padding: 4px 14px;
+        font-weight: 700;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+      #instrum-guide .guide-toggle {
+        background: rgba(255,255,255,0.15);
+        border: 1px solid rgba(255,255,255,0.3);
+        color: #fff;
+        border-radius: 20px;
+        padding: 3px 12px;
+        cursor: pointer;
+        font-size: 12px;
+        margin-left: 10px;
+        flex-shrink: 0;
+      }
+
+      /* ===== MODAL DE INSTRUCCIONES ===== */
+      #instrum-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        background: rgba(0,0,0,0.7);
+        align-items: center;
+        justify-content: center;
+      }
+      #instrum-modal.visible { display: flex; }
+      #instrum-modal .modal-box {
+        background: #fff;
+        border-radius: 16px;
+        max-width: 540px;
+        width: 90%;
+        padding: 36px;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+        font-family: 'Segoe UI', sans-serif;
+        position: relative;
+      }
+      #instrum-modal h2 {
+        margin: 0 0 6px;
+        color: #1c3a2e;
+        font-size: 22px;
+      }
+      #instrum-modal .subtitle {
+        color: #777;
+        font-size: 13px;
+        margin-bottom: 24px;
+      }
+      #instrum-modal ol {
+        padding-left: 20px;
+        margin: 0 0 20px;
+        line-height: 1.8;
+        color: #333;
+      }
+      #instrum-modal ol li { margin-bottom: 10px; }
+      #instrum-modal ol li strong { color: #1c3a2e; }
+      #instrum-modal .warn-box {
+        background: #fff8e1;
+        border-left: 4px solid #f59e0b;
+        padding: 12px 16px;
+        border-radius: 4px;
+        font-size: 13px;
+        color: #7c5900;
+        margin-bottom: 20px;
+      }
+      #instrum-modal .modal-close {
+        width: 100%;
+        padding: 12px;
+        background: #1c3a2e;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #instrum-modal .modal-close:hover { background: #2d5a45; }
+
+      /* ===== MODAL DE CONFIRMACION DE PUBLICACION ===== */
+      #instrum-publish-confirm {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999999;
+        background: rgba(0,0,0,0.75);
+        align-items: center;
+        justify-content: center;
+      }
+      #instrum-publish-confirm.visible { display: flex; }
+      #instrum-publish-confirm .confirm-box {
+        background: #fff;
+        border-radius: 16px;
+        max-width: 440px;
+        width: 90%;
+        padding: 34px;
+        font-family: 'Segoe UI', sans-serif;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      }
+      #instrum-publish-confirm .icon { font-size: 48px; text-align: center; margin-bottom: 12px; }
+      #instrum-publish-confirm h2 {
+        text-align: center;
+        color: #c0390b;
+        margin: 0 0 8px;
+        font-size: 20px;
+      }
+      #instrum-publish-confirm p {
+        text-align: center;
+        color: #555;
+        font-size: 14px;
+        margin-bottom: 24px;
+        line-height: 1.7;
+      }
+      #instrum-publish-confirm p strong { color: #c0390b; }
+      #instrum-publish-confirm .confirm-actions {
+        display: flex;
+        gap: 12px;
+      }
+      #instrum-publish-confirm button {
+        flex: 1;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        font-size: 15px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      #instrum-publish-confirm .btn-cancel { background: #e5e7eb; color: #333; }
+      #instrum-publish-confirm .btn-cancel:hover { background: #d1d5db; }
+      #instrum-publish-confirm .btn-confirm { background: #c0390b; color: #fff; }
+      #instrum-publish-confirm .btn-confirm:hover { background: #9b2d08; }
+
+      /* Empujar el CMS hacia abajo para que el banner no lo tape */
+      body > div:not(#instrum-guide):not(#instrum-modal):not(#instrum-publish-confirm) {
+        margin-top: 52px !important;
+      }
+    </style>
   </head>
   <body>
-    <!-- El script de Decap CMS se encarga de todo automáticamente -->
+
+    <!-- BANNER SUPERIOR DE GUÍA -->
+    <div id="instrum-guide">
+      <div class="guide-steps">
+        <div class="step"><span class="num">1</span> Haz clic en <b>&nbsp;"Contenido de la Tienda"</b></div>
+        <span class="arrow">›</span>
+        <div class="step"><span class="num">2</span> Edita o agrega un producto</div>
+        <span class="arrow">›</span>
+        <div class="step"><span class="num">3</span> Guarda como <b>&nbsp;Borrador</b> (gratis)</div>
+        <span class="arrow">›</span>
+        <div class="step"><span class="num">4</span> Al terminar el día, <b>&nbsp;PUBLICA TODO</b></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;">
+        <div class="credit-warn">⚡ Publicar = 15 créditos</div>
+        <button class="guide-toggle" onclick="document.getElementById('instrum-modal').classList.add('visible')">? Ayuda</button>
+      </div>
+    </div>
+
+    <!-- MODAL DE INSTRUCCIONES DETALLADAS -->
+    <div id="instrum-modal">
+      <div class="modal-box">
+        <h2>📖 Cómo usar el Administrador</h2>
+        <p class="subtitle">Panel exclusivo de INSTRUM - La Paz. Lee antes de editar.</p>
+        <ol>
+          <li><strong>Ir al Catálogo:</strong> En el menú izquierdo, haz clic en "Contenido de la Tienda" y selecciona "Catálogo de Instrumentos".</li>
+          <li><strong>Agregar o Editar:</strong> Desplázate hasta encontrar el producto o presiona el ícono "+" para crear uno nuevo. Rellena nombre, precio, descripción e imagen.</li>
+          <li><strong>Guardar como Borrador:</strong> Presiona el botón <b>"Guardar"</b> o elige <b>"Marcar como listo"</b>. Esto <b>NO</b> publica en la web todavía. Puedes editar cuantas veces quieras sin gastar nada.</li>
+          <li><strong>Publicar cuando termines:</strong> Una vez hayas terminado TODOS los cambios del día, busca el estado "Listo" en el panel izquierdo y presiona <b>"Publicar"</b>. Esto sí actualiza la página web oficial.</li>
+        </ol>
+        <div class="warn-box">
+          ⚠️ <strong>IMPORTANTE — Créditos de Netlify:</strong> Cada vez que publicas, se consumen <b>15 créditos</b> de la cuenta gratuita (que tiene solo 300/mes). Si publicas frecuentemente se agotan rápido. <b>Agrupa todos tus cambios y publica UNA sola vez al día.</b>
+        </div>
+        <button class="modal-close" onclick="document.getElementById('instrum-modal').classList.remove('visible')">✓ Entendido, cerrar guía</button>
+      </div>
+    </div>
+
+    <!-- MODAL DE CONFIRMACIÓN DE PUBLICACIÓN -->
+    <div id="instrum-publish-confirm">
+      <div class="confirm-box">
+        <div class="icon">⚠️</div>
+        <h2>¿Seguro que quieres publicar?</h2>
+        <p>
+          Publicar actualizará la página web visible para todos los clientes.<br><br>
+          <strong>Esto usará 15 créditos de Netlify.</strong><br>
+          Tienes solo 300 créditos al mes. Si ya publicaste varias veces hoy, considera esperar y agrupar más cambios primero.
+        </p>
+        <div class="confirm-actions">
+          <button class="btn-cancel" id="publish-cancel-btn">✕ Cancelar, seguir editando</button>
+          <button class="btn-confirm" id="publish-ok-btn">✓ Sí, publicar ahora</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script>
+      // Mostrar guía al cargar si es el primer acceso del día
+      (function() {
+        var lastSeen = localStorage.getItem('instrum_guide_seen');
+        var today = new Date().toDateString();
+        if (lastSeen !== today) {
+          document.getElementById('instrum-modal').classList.add('visible');
+          localStorage.setItem('instrum_guide_seen', today);
+        }
+      })();
+
+      // Interceptar el botón PUBLICAR de Decap CMS para pedir confirmación
+      var _publishPending = null;
+
+      function interceptPublishButton() {
+        // Buscamos todos los botones que contengan texto de publicar
+        document.querySelectorAll('button').forEach(function(btn) {
+          var text = (btn.textContent || btn.innerText || '').toLowerCase().trim();
+          if (
+            (text === 'publicar' || text === 'publish now' || text === 'publish' || text === 'publicar ahora') &&
+            !btn.dataset.instrumIntercepted
+          ) {
+            btn.dataset.instrumIntercepted = 'true';
+            btn.addEventListener('click', function(e) {
+              e.preventDefault();
+              e.stopImmediatePropagation();
+              _publishPending = btn;
+              document.getElementById('instrum-publish-confirm').classList.add('visible');
+            }, true);
+          }
+        });
+      }
+      // Observar cambios de DOM para interceptar el botón aunque aparezca tarde
+      var observer = new MutationObserver(function() { interceptPublishButton(); });
+      observer.observe(document.body, { childList: true, subtree: true });
+
+      document.getElementById('publish-cancel-btn').addEventListener('click', function() {
+        document.getElementById('instrum-publish-confirm').classList.remove('visible');
+        _publishPending = null;
+      });
+      document.getElementById('publish-ok-btn').addEventListener('click', function() {
+        document.getElementById('instrum-publish-confirm').classList.remove('visible');
+        if (_publishPending) {
+          // Disparar click original sin interceptación
+          _publishPending.dataset.instrumIntercepted = '';
+          _publishPending.click();
+          _publishPending = null;
+        }
+      });
+    </script>
   </body>
 </html>
